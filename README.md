@@ -1,6 +1,6 @@
 # SpeechToText — Decky Loader Plugin
 
-A microphone recorder that translates your voice to text and types wherever your cursor is - just like the mic button for smartphones.
+A microphone recorder that translates your voice to text and types it wherever your cursor is - just like the mic button for smartphones.
 
 ## Install
 
@@ -14,20 +14,16 @@ Once approved, it will be available directly in the Decky store:
 2. Go to the **Decky** tab and open the **Store**.
 3. Search for **SpeechToText** and tap **Install**.
 
-*Dependencies are installed automatically in the background on first load — nothing else required.*
+**Dependencies are installed automatically in the background on first load — nothing else required.*
 
 ### Option 2: Manual install
 
 In desktop mode:
 
 1. Make sure **Decky Loader** is installed ([install guide](https://github.com/SteamDeckHomebrew/decky-loader)).
-2. Open **Konsole** or your preferred CLI with sudo (search for it in the application launcher).
-3. Set a `sudo` password if you haven't already — you'll need it during install:
-   ```bash
-   passwd
-   ```
-
-Then run the installer:
+2. Open **Konsole** or your preferred CLI with sudo.
+3. Set a `sudo` password if you haven't already
+4. Run the installer:
 
 ```bash
 curl -L https://github.com/cmheisner/decky-speech-to-text/releases/latest/download/install.sh | bash
@@ -41,22 +37,19 @@ cd decky-speech-to-text
 bash install.sh
 ```
 
-*If Node.js/npm isn't installed, the script will install it automatically via [nvm](https://github.com/nvm-sh/nvm).*
+**If Node.js/npm isn't installed, the script will install it automatically via [nvm](https://github.com/nvm-sh/nvm).*
 
-Then reload Decky:
-
-> Quick Access Menu (⋮) → Decky → ··· → Reload plugins
+Then reload Decky via Quick Access Menu > Decky > ··· > Reload plugins
 
 ## Features
 
 - **Start and stop recording** — records for as long as you want, then transcribes via Google Speech Recognition
 - **Auto-pastes at your cursor** — close the menu after stopping and the transcript is typed into whatever is focused
-- **Wayland + Gamescope compatible** — uses `ydotool` (kernel-level input) with `xdotool` and clipboard as fallbacks
 - **All controls in the Quick Access Menu** — start/stop recording, view last transcript, copy or clear
 
-## Usage
+## How to Use
 
-1. Press **⋮ (Quick Access)** to open the Decky menu, then tap **SpeechToText**.
+1. Press **⋮** (Quick Access) > decky icon > tap **SpeechToText**.
 2. Press **Start Recording** — the status bar turns red.
 3. Speak naturally.
 4. Press **Stop Recording** — the status bar turns orange while transcribing.
@@ -65,10 +58,10 @@ Then reload Decky:
 
 ## Requirements
 
-| Requirement                                                    | Notes                                                                     |
-| -------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) | Plugin host                                                               |
-| Internet connection                                            | Speech recognition uses Google's API                                      |
+| Requirement                                                    | Notes                                                                 |
+| -------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) | Plugin host                                                           |
+| Internet connection                                            | Speech recognition uses Google's API                                  |
 | `ydotool` + `ydotoold`                                     | Primary text injection (Wayland/Gamescope) — installed automatically |
 | `xdotool`                                                    | Fallback text injection (X11) — installed automatically              |
 | `wl-clipboard`                                               | Clipboard fallback — installed automatically                         |
