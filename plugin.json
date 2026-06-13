@@ -1,0 +1,11 @@
+{
+  "name": "SpeechToText",
+  "author": "cmheisner",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["speech", "accessibility", "input", "microphone"],
+    "description": "Voice-to-text from the Quick Access Menu. Open the plugin panel, press Start Recording, speak, then press Stop — your speech is transcribed via Google's free Speech Recognition API and automatically typed wherever your cursor is focused. Falls back to clipboard if no input tool is available.",
+    "image": "https://raw.githubusercontent.com/cmheisner/decky-speech-to-text/main/assets/logo.png"
+  }
+}
